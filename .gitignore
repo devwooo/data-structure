@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# class 파일 올라가지 않도록
+*.class
+
+# IntelliJ IDEA 관련 설정 무시
+.idea/
+
+# iml 파일 제외
+*.iml
