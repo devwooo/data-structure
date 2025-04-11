@@ -4,7 +4,6 @@ public class Copystack {
     // 나중에 들어간게 먼저나가는 구조
     int idx = -1;
     int[] intArr = new int[5];
-    int[] tmpArr = null;
     public Copystack() {
 
     }
@@ -26,6 +25,8 @@ public class Copystack {
 
 
     public void lengthcheck() {
+        // 지역 변수로 변경하는 것이 더 안전하고 메모리 낭비를 줄일 수 있음
+        int[] tmpArr = null;
         // 같을경우 java.lang.ArrayIndexOutOfBoundsException 발생하므로 = 부등호 추가
         if (idx >= intArr.length - 1) {
             tmpArr = intArr;
