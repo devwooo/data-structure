@@ -2,7 +2,7 @@ import java.util.Stack;
 
 public class UseCopyStack {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Copystack c = new Copystack();
         System.out.println(c.empty());
         c.push(1);
@@ -18,6 +18,16 @@ public class UseCopyStack {
         System.out.println(c.empty());
         System.out.println(c);
         System.out.println(c.toString());
+
+        System.out.println("================");
+        GenericStack<Integer> gs = new GenericStack<>();
+        gs.push(3);
+        System.out.println(gs.pop());
+        System.out.println("================");
+        GenericStack<String> gs2 = new GenericStack<>();
+        gs2.push("hi");
+        gs2.push("hello");
+        System.out.println(gs2.pop());
     }
 }
 
