@@ -15,12 +15,23 @@ public class Pelindrom {
             throw new IllegalArgumentException("값이 존재하지 않습니다.");
         }
 
-        String rtnVal = "";
-        char[] chArr = str.toCharArray();
-        for (int i = chArr.length - 1 ; i >= 0 ; i--) {
-            rtnVal += chArr[i];
+
+        // += 는 String 객체를 재생성 해야 하므로 내부 배열을 사용하므로 효율적임
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+
+
+    }
+
+    // 개선
+    public static boolean isPalindrom2(String input) {
+        int left = 0, right = input.length() - 1;
+        while (left < right) {
+            if (input.charAt(left++) != input.charAt(right--)) {
+                return false;
+            }
         }
-        return rtnVal;
+        return true;
     }
 
     public static boolean isPalindrom(String input) {
